@@ -7,25 +7,20 @@ class SearchBar extends React.Component{
   }
 
   getSearchPlaceholder = (event) => {
-    
+
     this.props.getSearchTerm(event)
   }
-
+// I CURRENTLY CAN'T CLEAR THE FORM INPUT WHEN THE USER PRESSES A NEW BUTTON
+// IS THAT BAD? SINCE THE FILTERED DATA WOULD CHANGE
   render(){
     return(
-      <form>
-        {/*}{(this.props.searchPlayers === false) ? (null) : (
-          <input ></input>)}
-        {(this.props.searchPlayers === false) ? (null) : (
-          <input ></input>)}
-        {(this.props.searchPlayers === false) ? (null) : (
-          <input ></input>)}
-        {(this.props.searchPlayers === false) ? (null) : (
-          <input ></input>)}*/}
-        <input onChange={this.getSearchPlaceholder} placeholder={this.props.placeholder}></input>
-
-
-      </form>
+      <React.Fragment>
+        {(this.props.searchPlayers === false) && (this.props.searchTeams === false)  && (this.props.searchShows === false)  && (this.props.searchCoaches === false) ? (null) : (
+          <form>
+            <input type='text' id='search-input' onChange={this.props.getSearchTerm} placeholder={this.props.placeholder} ></input>
+          </form>
+        )}
+      </React.Fragment>
     )
   }
 }

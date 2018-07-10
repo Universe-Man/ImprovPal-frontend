@@ -1,12 +1,22 @@
 import React from 'react';
 import SearchBar from './SearchBar';
+import FilteredList from './FilteredList';
 
 class Searcher extends React.Component{
   constructor(){
     super();
     this.state = {
-      searchTerm: ""
+      searchTerm: "",
+      allData: ["one", "two", "three", "four", "five"],
+      // filteredData: [],
     }
+  }
+
+  filterData = () => {
+    return this.state.allData.filter(d => d.toLowerCase().includes(this.state.searchTerm.toLowerCase()))
+    //this.setState({
+    //  filteredData: notAllData
+    // })
   }
 
   getSearchTerm = (event) => {
@@ -21,7 +31,7 @@ class Searcher extends React.Component{
     return(
       <div>
         <SearchBar placeholder={this.props.placeholder} searchPlayers={this.props.searchPlayers} searchTeams={this.props.searchTeams} searchShows={this.props.searchShows} searchCoaches={this.props.searchCoaches} getSearchTerm={this.getSearchTerm} />
-        {(this.props.searchPlayers === false) ? (null) :
+        {/*{(this.props.searchPlayers === false) ? (null) :
           (<div>
             Searching for Players
           </div>)}
@@ -36,7 +46,8 @@ class Searcher extends React.Component{
         {(this.props.searchCoaches === false) ? (null) :
           (<div>
             Searching for Coaches
-          </div>)}
+          </div>)}*/}
+        <FilteredList data={this.filterData()} searchPlayers={this.props.searchPlayers} searchTeams={this.props.searchTeams} searchShows={this.props.searchShows} searchCoaches={this.props.searchCoaches} />
 
 
 

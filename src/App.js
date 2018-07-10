@@ -22,7 +22,11 @@ class App extends Component {
 
   logOut = () => {
     this.setState({
-      loggedIn: false
+      loggedIn: false,
+      searchPlayers: false,
+      searchTeams: false,
+      searchShows: false,
+      searchCoaches: false,
     })
   }
 
