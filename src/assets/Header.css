@@ -1,0 +1,19 @@
+#main-header{
+  border: dashed;
+  border-width: thick;
+  border-color: yellow;
+  height: 50px;
+  width: 90vw;
+  position: relative;
+  left: 5vw;
+  background-color: #006666;
+}
+
+.header-buttons{
+  border: 3px solid purple;
+  border-radius: 12px;
+  font-size: 16px;
+  padding: 3px 10px;
+  background-color: #ff9966;
+  margin: 10px;
+}

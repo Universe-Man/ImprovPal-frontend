@@ -1,5 +1,6 @@
 import React from 'react';
 import Searcher from '../components/Searcher';
+import '../assets/DisplayContainer.css';
 
 class DisplayContainer extends React.Component{
   constructor(props){
@@ -9,7 +10,7 @@ class DisplayContainer extends React.Component{
 
   render(){
     return(
-      <div>
+      <div id="display-container">
         <Searcher placeholder={this.props.placeholder} searchPlayers={this.props.searchPlayers} searchTeams={this.props.searchTeams} searchShows={this.props.searchShows} searchCoaches={this.props.searchCoaches}/>
       </div>
     )
