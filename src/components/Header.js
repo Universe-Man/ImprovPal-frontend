@@ -1,6 +1,7 @@
 import React from 'react';
 import '../assets/Header.css';
 // WILL NEED A LOGIN FORM TO RENDER FIRST EVENTUALLY!!!
+// CONSIDER IMPORTING NAVLINK FROM REACT ROUTER
 const Header = (props) => {
   return(
       <div id="main-header">

@@ -1,9 +1,11 @@
 import React from 'react';
 
 const ListItem = (props) => {
+  debugger
+
   return(
     <div>
-      {props.dataObj}
+      {props.dataObj.name}
     </div>
   )
 }

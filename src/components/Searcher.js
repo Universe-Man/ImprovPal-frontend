@@ -15,6 +15,7 @@ class Searcher extends React.Component{
       users: [],
       teams: [],
       shows: [],
+      coaches: [],
       allData: [],
       // filteredData: [],
     }
@@ -39,8 +40,18 @@ class Searcher extends React.Component{
   }
 // PLAYERS, SHOWS, AND TEAMS ARE ALL BEING FILTERED BY NAME SO I CAN USE THE SAME FUNCTION BELOW, BUT MAY NEED A NEW ONE OR MAKE CHANGES SHOULD I NEED TO!!
   filterData = () => {
-    
-    return this.state.allData.filter(d => d.name.toLowerCase().includes(this.state.searchTerm.toLowerCase()))
+    let flexData = []
+    if (this.props.searchPlayers === true){
+      flexData = this.state.users
+    } else if (this.props.searchTeams === true){
+      flexData = this.state.teams
+    } else if (this.props.searchShows === true){
+      flexData = this.state.shows
+    } else if (this.props.searchCoaches === true){
+      flexData = this.state.coaches
+    }
+
+    return flexData.filter(d => d.name.toLowerCase().includes(this.state.searchTerm.toLowerCase()))
     //this.setState({
     //  filteredData: notAllData
     // })
