@@ -9,7 +9,7 @@ const Header = (props) => {
         ) : (<React.Fragment>
               <button className="header-buttons"  onClick={props.renderSearchPlayersForm}>Search Players</button>
               <button className="header-buttons"  onClick={props.renderSearchTeamsForm}>Search Teams</button>
-              <button className="header-buttons"  onClick={props.renderSearchShowsForm}>Search Shows</button>
+              <button className="header-buttons" onClick={props.renderSearchShowsForm}>Search Shows</button>
               <button className="header-buttons"  onClick={props.renderSearchCoachesForm}>Search Coaches</button>
               <button className="header-buttons"  onClick={props.logOut}>Logout</button>
             </React.Fragment>)}

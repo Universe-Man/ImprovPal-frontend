@@ -2,4 +2,7 @@
   border: dashed;
   border-width: thick;
   border-color: purple;
+  height: 500px;
+  background-color: #99ccff;
+  /* or background-color #ccccff */
 }

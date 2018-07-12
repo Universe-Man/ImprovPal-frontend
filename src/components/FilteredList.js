@@ -1,5 +1,7 @@
 import React from 'react';
 import ListItem from './ListItem';
+import '../assets/Searcher.css';
+
 
 const FilteredList = (props) => {
   // TEMPORARY KEY FOR ID RIGHT NOW, NEEDS TO BE REPLACED WITH AN ACTUALLY ID

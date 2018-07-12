@@ -1,0 +1,21 @@
+#searcher{
+  border: dashed;
+  border-width: thick;
+  border-color: red;
+  height: 300px;
+}
+
+#search-form{
+  border: dashed;
+  border-width: thick;
+  border-color: orange;
+  height: 50px;
+  width: 200px;
+}
+
+#search-input{
+  text-align: center;
+  font-size: 16px;
+  position: relative;
+  top: 12px
+}
